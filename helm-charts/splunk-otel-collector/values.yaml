@@ -14,7 +14,7 @@ fullnameOverride: ""
 # log as "k8s.cluster.name" attribute.
 ################################################################################
 
-clusterName: ""
+clusterName: "monitoring"
 
 ################################################################################
 # Splunk Data-to-Everything Platform configuration.
@@ -26,10 +26,10 @@ splunkPlatform:
   # Required for Splunk Enterprise/Cloud. URL to a Splunk instance to send data
   # to. e.g. "http://X.X.X.X:8088/services/collector". Setting this parameter
   # enables Splunk Platform as a destination.
-  endpoint: ""
+  endpoint: "https://http-inputs-prd-p-19lmt.splunkcloud.com:8088"
   # Required for Splunk Enterprise/Cloud (if `endpoint` is specified). Splunk
   # HTTP Event Collector token.
-  token: ""
+  token: "93df0f17-609c-49c9-9ee6-ce9ef98ca793"
 
   # Name of the Splunk event type index targeted. Required when ingesting logs to Splunk Platform.
   index: "main"
@@ -154,7 +154,7 @@ logsEngine: fluentd
 # - "azure" (Microsoft Azure)
 ################################################################################
 
-cloudProvider: ""
+cloudProvider: "gcp"
 
 ################################################################################
 # Kubernetes distribution being run. Leave empty for other.
@@ -166,7 +166,7 @@ cloudProvider: ""
 # - "openshift" (RedHat OpenShift)
 ################################################################################
 
-distribution: ""
+distribution: "gke/autopilot"
 
 ################################################################################
 # Optional "environment" parameter that will be added to all the telemetry
